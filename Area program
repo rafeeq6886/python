@@ -1,0 +1,47 @@
+import math
+def sqareArea():
+    s = int(input("Enter side value: "))
+    sarea = s*s
+    return print(f"squre area is : {sarea}")
+
+
+def RecArea():
+    l = int(input("Enter length of the Rectangle : "))
+    w = int(input("Enter Width of the Rectangle: "))
+    rarea = l * w
+    return print(f"Area of the Rectangel is : {rarea}")
+
+
+
+def TriArea():
+    h = int(input("Enter height of the Triangle: "))
+    b = int(input("Enter base of the Triangle: "))
+    tarea = (h*b) / 2
+    return print(f"Area of the Triangle is : {tarea}")
+
+
+
+def CirArear():
+    r = float(input("Enter circle radius : ")) 
+    carea = math.pi * r**2
+    return print(f" Area of the Circle is : {carea}")   
+
+def calculate_area():
+    shapes = ["Square","Rectangle","Triangle","Circle"]
+    sh = input("Enter share and its parameters from the below list:"
+               "1. Sqaure," 
+               "2. Rectangle," 
+               "3. Triagle," 
+               "4. Circle ")
+    if sh == shapes[0]:
+        sqareArea()
+    elif sh == shapes[1]:
+        RecArea()
+    elif sh == shapes[2]:
+        TriArea()
+    elif sh == shapes[3]:
+        CirArear()
+    else:
+        print("Wrong input")
+
+calculate_area()
